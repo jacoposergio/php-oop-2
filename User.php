@@ -2,7 +2,7 @@
 
 class User{
     public $name;
-    public $discount = '0';
+    public $discount = 0;
     public $account = 0;
     protected $cart = [];
 
@@ -14,6 +14,7 @@ class User{
         $this->cart[] = $product_to_add;
       }
       
+      // prodotti scelti 
       public function  getCart() {
         return $this-> cart;
       }
@@ -24,10 +25,19 @@ class User{
           $sum += $item->price;
         }
         
-        
         // Leviamo lo sconto 
         $sum -= $sum * $this->discount / 100;
         var_dump($sum);
+      }
+
+        public function makePayment() {
+            $finalPrice = $this->totalPrice();
+            
+          if($this->account < $finalPrice) {
+            die('Saldo non disponibile');
+        } else {
+            return 'ok';
+        }
       }
 
 }

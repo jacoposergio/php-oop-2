@@ -29,8 +29,12 @@ $carlo_bianchi = new UnregisteredUser('Carlo Bianchi');
 $carlo_bianchi->AddToCart($snake);
 $carlo_bianchi->AddToCart($dog);
 // var_dump($carlo_bianchi->getCart());
-// var_dump($carlo_bianchi);
+var_dump($carlo_bianchi);
 $carlo_bianchi->totalPrice();
+$carlo_bianchi->account = 100;
+if($carlo_bianchi->makePayment() === 'ok') {
+    echo 'Grazie per aver completato il tuo acquisto';
+}
 
 
 ?>
