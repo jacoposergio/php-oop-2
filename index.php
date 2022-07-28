@@ -28,7 +28,9 @@ var_dump($ciro_esposito);
 $carlo_bianchi = new UnregisteredUser('Carlo Bianchi');
 $carlo_bianchi->AddToCart($snake);
 $carlo_bianchi->AddToCart($dog);
-var_dump($carlo_bianchi);
+// var_dump($carlo_bianchi->getCart());
+// var_dump($carlo_bianchi);
+$carlo_bianchi->totalPrice();
 
 
 ?>

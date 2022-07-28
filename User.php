@@ -13,6 +13,23 @@ class User{
       public function AddToCart($product_to_add) {
         $this->cart[] = $product_to_add;
       }
+      
+      public function  getCart() {
+        return $this-> cart;
+      }
+
+      public function totalPrice() {
+        $sum=0;
+        foreach($this->cart as $item){
+          $sum += $item->price;
+        }
+        
+        
+        // Leviamo lo sconto 
+        $sum -= $sum * $this->discount / 100;
+        var_dump($sum);
+      }
+
 }
 
 ?>
