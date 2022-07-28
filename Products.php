@@ -5,13 +5,15 @@ class Products {
       public $toy;
       public $house = 'kennel';
       public $clothes = 'no clothes';
+      public $price = 30;
+
 
       public function __construct($_food, $toy) {
         $this->food = $_food;
         $this->toy = $toy;
       }
       public function getInfo() {
-        return "the pet feeds on $this->food, she plays with $this->toy, you can leave her in a $this->house, she wears $this->clothes";
+        return "the pet feeds on $this->food, she plays with $this->toy, you can leave her in a $this->house, she wears $this->clothes, total price is $this->price $";
       }
 }
 

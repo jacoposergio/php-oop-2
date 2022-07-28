@@ -6,6 +6,8 @@ class SnakeProducts extends Products {
 
     // override
     public $house = 'glass case';
+     // override
+     public $price = '50';
 }
 
 ?>

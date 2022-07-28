@@ -9,6 +9,7 @@
 require_once __DIR__ . '/DogProducts.php';
 require_once __DIR__ . '/SnakeProducts.php';
 require_once __DIR__ . '/BirdProducts.php';
+require_once __DIR__ . '/Utente.php';
 
 
 $dog = new DogProducts('kibble','peluche');
@@ -19,4 +20,7 @@ var_dump($snake);
 
 $bird = new birdProducts('feed','sprigs');
 var_dump($bird);
+
+$ciro_esposito = new Utente('Ciro Esposito');
+var_dump($ciro_esposito);
 ?>

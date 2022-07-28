@@ -6,6 +6,9 @@ class DogProducts extends Products {
 
         // override
         public $clothes = 'cape';
+         // override
+         public $price = '100';
+
 }
 
 ?>
