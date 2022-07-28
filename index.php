@@ -6,8 +6,17 @@
 // BONUS:
 // Il pagamento avviene con la carta prepagata che deve contenere un saldo sufficiente all'acquisto.
 
-require_once __DIR__ . '/Products.php';
+require_once __DIR__ . '/DogProducts.php';
+require_once __DIR__ . '/SnakeProducts.php';
+require_once __DIR__ . '/BirdProducts.php';
 
-$dogProducts = new Products('kibble', 'peluche');
-var_dump($dogProducts->getInfo());
+
+$dog = new DogProducts('kibble','peluche');
+var_dump($dog);
+
+$snake = new SnakeProducts('rats','wood trunk');
+var_dump($snake);
+
+$bird = new birdProducts('feed','sprigs');
+var_dump($bird);
 ?>
