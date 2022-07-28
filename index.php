@@ -5,4 +5,9 @@
 // L'utente potrà sia comprare i prodotti senza registrarsi, oppure iscriversi e ricevere il 20% di sconto su tutti i prodotti.
 // BONUS:
 // Il pagamento avviene con la carta prepagata che deve contenere un saldo sufficiente all'acquisto.
+
+require_once __DIR__ . '/Products.php';
+
+$dogProducts = new Products('kibble', 'peluche');
+var_dump($dogProducts->getInfo());
 ?>
