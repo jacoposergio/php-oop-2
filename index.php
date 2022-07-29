@@ -14,7 +14,7 @@ require_once __DIR__ . '/UnregisteredUser.php';
 
 
 $dog = new DogProducts('kibble','peluche');
-// var_dump($dog);
+var_dump($dog);
 
 $snake = new SnakeProducts('rats','wood trunk');
 // var_dump($snake);
@@ -42,6 +42,7 @@ try {
         echo 'Grazie per aver completato il tuo acquisto';
         } 
     } catch (Exception $e) {
+        error_log($e->getMessage());
         echo 'Sei un poveraccio';
 }
 
