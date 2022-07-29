@@ -39,8 +39,13 @@ class User{
             // var_dump($this->totalPrice());
             // var_dump($this->account);
             
+        //   if($this->account < $finalPrice) {
+        //     die('Saldo non disponibile');
+        // } else {
+        //     return 'ok';
+        // }
           if($this->account < $finalPrice) {
-            die('Saldo non disponibile');
+             throw new Exception("Utente: $this->name: Saldo non disponibile");
         } else {
             return 'ok';
         }
