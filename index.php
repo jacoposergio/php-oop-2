@@ -14,24 +14,25 @@ require_once __DIR__ . '/UnregisteredUser.php';
 
 
 $dog = new DogProducts('kibble','peluche');
-var_dump($dog);
+// var_dump($dog);
 
 $snake = new SnakeProducts('rats','wood trunk');
-var_dump($snake);
+// var_dump($snake);
 
 $bird = new birdProducts('feed','sprigs');
-var_dump($bird);
+// var_dump($bird);
 
 $ciro_esposito = new RegisteredUser('Ciro Esposito');
-var_dump($ciro_esposito);
+// var_dump($ciro_esposito);
 
 $carlo_bianchi = new UnregisteredUser('Carlo Bianchi');
 $carlo_bianchi->AddToCart($snake);
 $carlo_bianchi->AddToCart($dog);
 // var_dump($carlo_bianchi->getCart());
-var_dump($carlo_bianchi);
+// var_dump($carlo_bianchi);
 $carlo_bianchi->totalPrice();
-$carlo_bianchi->account = 100;
+$carlo_bianchi->account = 149;
+// var_dump($carlo_bianchi->account);
 if($carlo_bianchi->makePayment() === 'ok') {
     echo 'Grazie per aver completato il tuo acquisto';
 }

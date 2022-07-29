@@ -10,8 +10,8 @@ class User{
         $this->name = $_name;
       }
 
-      public function AddToCart($product_to_add) {
-        $this->cart[] = $product_to_add;
+      public function AddToCart($product) {
+        $this->cart[] = $product;
       }
       
       // prodotti scelti 
@@ -20,18 +20,24 @@ class User{
       }
 
       public function totalPrice() {
-        $sum=0;
-        foreach($this->cart as $item){
-          $sum += $item->price;
+        $sum = 0;
+        foreach($this->cart as $product){
+          $sum += $product->price;
+          // var_dump($product->price);
         }
+        // var_dump($totalPrice);
         
         // Leviamo lo sconto 
         $sum -= $sum * $this->discount / 100;
-        var_dump($sum);
+        // var_dump($sum);
+        return $sum;
       }
+      // var_dump($this->totalPrice());
 
         public function makePayment() {
             $finalPrice = $this->totalPrice();
+            // var_dump($this->totalPrice());
+            // var_dump($this->account);
             
           if($this->account < $finalPrice) {
             die('Saldo non disponibile');
