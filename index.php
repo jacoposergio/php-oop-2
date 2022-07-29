@@ -31,10 +31,18 @@ $carlo_bianchi->AddToCart($dog);
 // var_dump($carlo_bianchi->getCart());
 // var_dump($carlo_bianchi);
 $carlo_bianchi->totalPrice();
-$carlo_bianchi->account = 0;
+$carlo_bianchi->account = 30;
 // var_dump($carlo_bianchi->account);
-if($carlo_bianchi->makePayment() === 'ok') {
-    echo 'Grazie per aver completato il tuo acquisto';
+// if($carlo_bianchi->makePayment() === 'ok') {
+//     echo 'Grazie per aver completato il tuo acquisto';
+// }
+
+try {
+    if($carlo_bianchi->makePayment() === 'ok') {
+        echo 'Grazie per aver completato il tuo acquisto';
+        } 
+    } catch (Exception $e) {
+        echo 'Sei un poveraccio';
 }
 
 
